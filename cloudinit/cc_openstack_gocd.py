@@ -54,7 +54,7 @@ def handle(name, cfg, cloud, log, _args):
                 replace_config(go_agent_default, key[len(
                     go_agent_prefix):], md['meta'][key])
                 # To handle new go-agent's
-                if key == (go_server_prefix + "GO_SERVER_URL"):
+                if key == (go_agent_prefix + "GO_SERVER_URL"):
                     replace_config(
                         go_agent_wrapper, "wrapper.app.parameter.101", md['meta'][key])
             elif key.startswith(go_server_prefix):
